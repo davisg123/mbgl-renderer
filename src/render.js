@@ -455,6 +455,8 @@ export const render = (style, width = 1024, height = 1024, options) =>
             })
         }
 
+        const mode = 'tile';
+
         // Options object for configuring loading of map data sources.
         // Note: could not find a way to make this work with mapbox vector sources and styles!
         const mapOptions = {
@@ -547,6 +549,7 @@ export const render = (style, width = 1024, height = 1024, options) =>
                 }
             },
             ratio,
+            mode
         }
 
         const map = new mbgl.Map(mapOptions)
